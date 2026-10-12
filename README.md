@@ -7,7 +7,6 @@ This repo holds what is shared across the forge services (forge-issue, forge-cod
 ## Layout
 
 - `deploy/` — the host rebuild kit: path router, launchd plists for every service, OAuth keepalive probe, install README
-- `docs/` — factory-wide contracts and conventions (trace docs, deploy-order rules)
 
 ## Services
 

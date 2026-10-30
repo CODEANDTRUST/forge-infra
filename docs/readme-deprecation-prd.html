@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>README deprecation notice — PRD</title>
+<style>
+  body{font-family:-apple-system,sans-serif;max-width:52rem;margin:2rem auto;padding:0 1rem;line-height:1.55;color:#1a1a1a}
+  h1,h2{line-height:1.25}
+  code{background:#f2f2f2;padding:.1em .3em;border-radius:3px;font-size:.9em}
+  table{border-collapse:collapse;width:100%}
+  td,th{border:1px solid #ddd;padding:.4rem .6rem;text-align:left;vertical-align:top}
+  .meta{color:#666;font-size:.9rem}
+</style>
+</head>
+<body>
+<h1>README deprecation notice — PRD</h1>
+<p class="meta">created: 2026-10-30T00:00:00Z &middot; last updated: 2026-10-30T00:00:00Z</p>
+
+<h2>Goal</h2>
+<p>Tell readers of <code>README.md</code> that forge-infra is deprecated and that new updates will be done on forge-issue.</p>
+
+<h2>Non-goals</h2>
+<ul>
+  <li>Change any README content besides the notice.</li>
+  <li>Edit deploy kit sources or other repos.</li>
+</ul>
+
+<h2>Constraints</h2>
+<ul>
+  <li>Change only <code>README.md</code>.</li>
+  <li>Notice goes near the top, directly under the H1.</li>
+  <li>No secrets. No generated output edited.</li>
+</ul>
+
+<h2>Plan</h2>
+<table>
+  <tr><th>Step</th><th>Acceptance criterion</th><th>Evidence</th></tr>
+  <tr>
+    <td>1. Insert deprecation notice</td>
+    <td>Notice sits under the H1, names forge-infra as deprecated, points to forge-issue, and says new updates will be done there. All other README content byte-identical to revision <code>cda33ee</code>.</td>
+    <td><code>git diff cda33ee -- README.md</code> shows exactly two inserted lines and zero other hunks.</td>
+  </tr>
+</table>
+
+<h2>Validation</h2>
+<ul>
+  <li><code>git diff cda33ee -- README.md</code> &rarr; 2 insertions, 0 deletions, one hunk under the H1.</li>
+  <li>No test suite exists in this repo; the diff check is the canonical check.</li>
+</ul>
+
+<p>Acceptance target: every requirement in the issue's DoD list is met and the diff shows no unrelated changes.</p>
+</body>
+</html>

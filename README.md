@@ -1,5 +1,7 @@
 # forge-infra
 
+> **Deprecation notice:** forge-infra is deprecated. New updates will be done on [forge-issue](https://github.com/CODEANDTRUST/forge-issue).
+
 Factory-wide infrastructure for the **Forge software factory**.
 
 This repo holds what is shared across the forge services (forge-issue, forge-code, forge-pr). The service code lives in its own repos; this repo holds the host-level deploy kit and factory-wide conventions.

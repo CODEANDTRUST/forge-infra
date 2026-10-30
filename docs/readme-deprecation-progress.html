@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>README deprecation notice — Progress</title>
+<style>
+  body{font-family:-apple-system,sans-serif;max-width:52rem;margin:2rem auto;padding:0 1rem;line-height:1.55;color:#1a1a1a}
+  code{background:#f2f2f2;padding:.1em .3em;border-radius:3px;font-size:.9em}
+  .status{font-variant:small-caps;text-transform:uppercase;font-weight:600;color:#186a3b}
+  .pass{color:#186a3b;font-weight:600}
+  .meta{color:#666;font-size:.9rem}
+  ul{padding-left:1.2rem}
+</style>
+</head>
+<body>
+<h1>README deprecation notice — Progress</h1>
+<p class="meta">created: 2026-10-30T00:00:00Z &middot; last updated: 2026-10-30T00:00:00Z &middot; PRD: <a href="readme-deprecation-prd.html">readme-deprecation-prd.html</a></p>
+<p>Status: <span class="status">complete</span></p>
+
+<h2>Route</h2>
+<p>Fast path. Docs-only copy change with a concrete check. No security or trust boundary touched. No Jev gate (no test run for that gate to inform; key presence not required for this route).</p>
+
+<h2>Artifact pre-check</h2>
+<ul>
+  <li>Three core artifacts (architecture, features map, design): the repo holds no <code>docs/</code> artifacts. The task is documentation-only and depends on none of them; bootstrapping them in a deprecation PR was ruled out of scope. Status: skipped for this route, not blocking.</li>
+  <li>Developer setup / SRE runbook: not touched by the task. No gaps raised.</li>
+</ul>
+
+<h2>Steps</h2>
+<table>
+  <tr><th>Step</th><th>Criterion</th><th>Evidence</th><th>Result</th></tr>
+  <tr>
+    <td>1</td>
+    <td>Deprecation notice under the H1; other README content unchanged</td>
+    <td><code>git diff cda33ee -- README.md</code> &rarr; 2 insertions, 0 deletions, one hunk; notice names forge-infra, points to forge-issue, states new updates happen there</td>
+    <td><span class="pass">pass</span></td>
+  </tr>
+</table>
+
+<h2>Reviewer findings</h2>
+<p>Self-reviewed the diff (fast-path role played by the implementing session). No unrelated changes. Requirements and DoD covered.</p>
+
+<h2>Residual risks</h2>
+<ul>
+  <li>Issue DoD requires reporter confirmation of the shipped README; that confirmation is pending on PR review by Forge.</li>
+</ul>
+</body>
+</html>
